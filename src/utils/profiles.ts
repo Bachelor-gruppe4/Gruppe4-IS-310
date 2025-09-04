@@ -9,7 +9,7 @@ export const profiles = [
     name: "Thea Svele Corneliussen",
     role: "Prosjektleder, Fullstack-utvikler",
     image: TheaImg,
-    description: "Jeg er 22 år gammel og kommer fra Oslo. Med bakgrunn fra servicebransjen og med at jeg tar en utdanning i IT & Informasjonssystemer får jeg en unik kombinasjon av teknisk kompetanse og menneskelig forståelse. Som fullstack utvikler trives jeg med å bygge løsninger som både fungerer teknisk og gir en god brukeropplevelse, samtidig som jeg har en sterk interesse for sikkerhet. \nGjennom studier og prosjekter, hvor jeg også har hatt rollen som prosjektleder, har jeg lært hvor viktig det er å kombinere struktur, samarbeid og kommunikasjon for å levere gode resultater. Jeg motiveres av å forstå brukerbehov og omsette dem til digitale tjenester som gjør en forskjell for både bruker og virksomhet.",
+    description: "Jeg er 22 år gammel og kommer fra Oslo. Med bakgrunn fra servicebransjen og med at jeg tar en utdanning i IT & Informasjonssystemer får jeg en unik kombinasjon av teknisk kompetanse og menneskelig forståelse. Som fullstack utvikler trives jeg med å bygge løsninger som både fungerer teknisk og gir en god brukeropplevelse, samtidig som jeg har en sterk interesse for cybersikkerhet. \nGjennom studier og prosjekter, hvor jeg også har hatt rollen som prosjektleder, har jeg lært hvor viktig det er å kombinere struktur, samarbeid og kommunikasjon for å levere gode resultater. Jeg motiveres av å forstå brukerbehov og omsette dem til digitale tjenester som gjør en forskjell for både bruker og virksomhet.",
     github: "https://github.com/SveleThea",
     linkedin: "https://www.linkedin.com/in/thea-svele-corneliussen-046a36354/"
   },
