@@ -1,69 +1,34 @@
-# React + TypeScript + Vite
+# Group 4´s Bachelor Profiling Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to our Bachelor Profiling Website, a web application built to present our group and showcase our individual profiles. We are five students currently pursuing a Bachelor’s degree in IT and Information Systems at the University of Agder. This website serves as a digital portfolio where potential partners and companies can get to know us better and explore our skills, strengths, and experiences.
 
-Currently, two official plugins are available:
+## Live Website:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://gruppe4-is-310-blush.vercel.app
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Technology | Purpose |
+|-----------|---------|
+| React | Component-based frontend framework |
+| TypeScript | Strongly typed JavaScript for better maintainability |
+| Vite | Fast development server and build tool |
+| CSS | Styling and layout |
+| Vercel | Hosting and continuous deployment |
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Follow these steps if you want to run the project locally:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**1. Clone the repository**
+`git clone https://github.com/Bachelor-gruppe4/Gruppe4-IS-310.git
+cd Gruppe4-IS-310`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**2. Install dependencies**
+`npm install`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**3. Start the development server**
+`npm run dev`
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Your application should now be running at:
+http://localhost:5173
