@@ -1,5 +1,6 @@
 import './App.css';
 import { profiles } from './utils/profiles';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function App() {
   return (
@@ -64,6 +65,7 @@ export default function App() {
           </p>
         </div>
 
+        {/* Team Profiles */}
         <div>
           <h1
             style={{
@@ -95,7 +97,6 @@ export default function App() {
                   textAlign: 'center',
                   background: '#fff',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-                  // Center the last profile in the last row
                   gridColumn: idx === 4 ? '1 / span 2' : undefined,
                   justifySelf: idx === 4 ? 'center' : undefined,
                 }}
@@ -104,10 +105,10 @@ export default function App() {
                   src={profile.image}
                   alt={profile.name}
                   style={{
-                    width: '220px',        // større bredde
-                    height: '220px',       // større høyde
-                    objectFit: 'cover',    // behold proporsjoner
-                    borderRadius: '8px',   // litt avrundet hjørner
+                    width: '220px',
+                    height: '220px',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
                     marginBottom: '2rem',
                     border: '2px solid #719867ff',
                   }}
@@ -129,8 +130,23 @@ export default function App() {
                     color: '#444',
                   }}
                 >
-                  {profile.description}
+                  {profile.shortDescription}
                 </p>
+                <div
+                  style={{
+                    marginTop: '1rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '1rem',
+                  }}
+                >
+                  <a href={profile.github} target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={24} color="#333" />
+                  </a>
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={24} color="#0A66C2" />
+                  </a>
+                </div>
               </div>
             ))}
           </div>

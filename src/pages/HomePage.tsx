@@ -1,8 +1,10 @@
-import { profiles } from '../utils/profiles';
+import './App.css';
+import { profiles } from './utils/profiles';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-export default function HomePage() {
+export default function App() {
   return (
-    <div style={{ background: '#f5f3ef', minHeight: '100vh' }}>
+    <div>
       {/* Banner */}
       <div
         style={{
@@ -52,8 +54,8 @@ export default function HomePage() {
           <p>
             Vi er en gruppe på 5 studenter som studerer Bachelor IT og informasjonssystemer på UiA.
             Gruppen vår har samarbeidet gjennom hele studiet og har lært hverandres styrker og
-            svakheter, samt hvordan man best håndterer konflikter innad i gruppen. Vi jobber
-            strukturert og samarbeider godt for å oppnå gode resultater.
+            svakheter, samt hvordan man best håndterer konflikter innad i gruppen. Vi jobber strukturert
+            og samarbeider godt for å oppnå gode resultater.
           </p>
           <p>
             Vi har en god blanding av forskjellige ferdigheter, og dermed ønsker vi å jobbe med noe
@@ -74,39 +76,40 @@ export default function HomePage() {
           >
             Team Profiles
           </h1>
-
-          {/* Grid for first 4 profiles */}
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '1.5rem',
               justifyItems: 'center',
-              maxWidth: '600px',
-              width: '100%',
-              margin: '0 auto',
+              margin: '0 auto 3rem auto',
+              maxWidth: '700px',
             }}
           >
-            {profiles.slice(0, 4).map((profile, idx) => (
+            {profiles.map((profile, idx) => (
               <div
                 key={idx}
                 style={{
                   border: '1px solid #c2bda9',
                   borderRadius: '10px',
                   padding: '1.5rem',
-                  width: '260px',
+                  width: '300px',
                   textAlign: 'center',
                   background: '#fff',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                  gridColumn: idx === 4 ? '1 / span 2' : undefined,
+                  justifySelf: idx === 4 ? 'center' : undefined,
                 }}
               >
                 <img
                   src={profile.image}
                   alt={profile.name}
                   style={{
-                    width: '90px',
-                    borderRadius: '50%',
-                    marginBottom: '3rem',
+                    width: '220px',
+                    height: '220px',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    marginBottom: '2rem',
                     border: '2px solid #719867ff',
                   }}
                 />
@@ -127,62 +130,25 @@ export default function HomePage() {
                     color: '#444',
                   }}
                 >
-                  {profile.description}
+                  {profile.shortDescription}
                 </p>
+                <div
+                  style={{
+                    marginTop: '1rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '1rem',
+                  }}
+                >
+                  <a href={profile.github} target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={24} color="#333" />
+                  </a>
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={24} color="#0A66C2" />
+                  </a>
+                </div>
               </div>
             ))}
-          </div>
-
-          {/* Centered last profile */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              marginTop: '2rem',
-              marginBottom: '3rem',
-            }}
-          >
-            <div
-              style={{
-                border: '1px solid #c2bda9',
-                borderRadius: '10px',
-                padding: '1.5rem',
-                width: '300px',
-                textAlign: 'center',
-                background: '#fff',
-                boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-              }}
-            >
-              <img
-                src={profiles[4].image}
-                alt={profiles[4].name}
-                style={{
-                  width: '90px',
-                  borderRadius: '50%',
-                  marginBottom: '3rem',
-                  border: '2px solid #719867ff',
-                }}
-              />
-              <h2
-                style={{
-                  fontSize: '1.2rem',
-                  margin: '0.5rem 0',
-                  color: '#3d5229',
-                }}
-              >
-                {profiles[4].name}
-              </h2>
-              <p
-                style={{
-                  width: '90%',
-                  minHeight: '60px',
-                  marginTop: '0.5rem',
-                  color: '#444',
-                }}
-              >
-                {profiles[4].description}
-              </p>
-            </div>
           </div>
         </div>
       </div>
