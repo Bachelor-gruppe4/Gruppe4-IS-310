@@ -16,12 +16,12 @@ export const profiles = [
     linkedin: "https://www.linkedin.com/in/olivia-petter%C3%B8e/"
   },
   {
-    name: "Vilde Christensen",
-    role: "Frontend-utvikler",
-    image: "/src/assets/images/Vilde.jpeg",
-    description: "Jeg heter Vilde Christensen og er en 22 år gammel student fra Lyngdal. For tiden studerer jeg IT og informasjonssystemer ved Universitetet i Agder, med særlig interesse for frontend-utvikling, design og cybersikkerhet. Gjennom flere år i servicebransjen har jeg opparbeidet meg verdifull erfaring innen ledelse, kundebehandling og samarbeid. Disse ferdighetene opplever jeg som svært relevant også innen teknologi og utvikling. Jeg trives godt i sosiale settinger og finner motivasjon i å arbeide sammen med andre for å skape gode resultater.\n Teknologiens utvikling fascinerer meg, og jeg ser frontend-utvikling som en spennende mulighet til å arbeide i skjæringspunktet mellom mennesker og teknologi. Det gir meg inspirasjon å kunne bidra til å skape intuitive, brukervennlige og engasjerende digitale løsninger som kan ha en positiv innvirkning på menneskers hverdag.",
-    github: "https://github.com/Vildech",
-    linkedin: "https://www.linkedin.com/in/vilde-christensen/"
+  name: "Vilde Christensen",
+  role: "Frontend-utvikler",
+  image: "/src/assets/images/Vilde.jpeg",
+  description: "Jeg heter Vilde Christensen og er en 22 år gammel student fra Lyngdal. For tiden studerer jeg IT og informasjonssystemer ved Universitetet i Agder, med særlig interesse for programmering, cybersikkerhet og design. Teknologi har alltid fascinert meg, og jeg ser frontend-utvikling som en spennende måte å jobbe kreativt med digitale løsninger på. Jeg trives godt i sosiale settinger og finner motivasjon i å arbeide sammen med andre for å skape gode resultater.\n\nGjennom flere år i servicebransjen har jeg opparbeidet meg verdifull erfaring innen ledelse, kundebehandling og samarbeid. Det er ferdigheter jeg opplever som svært nyttige også innen teknologi og utvikling. Nettopp derfor motiverer det meg å kunne utvikle brukervennlige og engasjerende grensesnitt som gjør en forskjell for folk.",
+  github: "https://github.com/Vildech",
+  linkedin: "https://www.linkedin.com/in/vilde-christensen/"
   },
   {
     name: "Andrea Vågen",
