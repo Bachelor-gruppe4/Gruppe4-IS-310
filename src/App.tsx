@@ -36,6 +36,7 @@ export default function App() {
 
       {/* Content */}
       <div style={{ marginTop: '8rem' }}>
+        {/* Om oss */}
         <div
           style={{
             maxWidth: '1100px',
@@ -50,10 +51,16 @@ export default function App() {
         >
           <h2 style={{ color: '#3d5229' }}>Om oss</h2>
           <p>
-            Vi er en gruppe på 5 studenter som studerer Bachelor IT og informasjonssystemer på UiA. Gruppen vår har samarbeidet gjennom hele studiet og har lært hverandres styrker og svakheter, samt hvordan man best håndterer konflikter innad i gruppen. Vi jobber strukturert og samarbeider godt for å oppnå gode resultater.
+            Vi er en gruppe på 5 studenter som studerer Bachelor IT og informasjonssystemer på UiA.
+            Gruppen vår har samarbeidet gjennom hele studiet og har lært hverandres styrker og
+            svakheter, samt hvordan man best håndterer konflikter innad i gruppen. Vi jobber strukturert
+            og samarbeider godt for å oppnå gode resultater.
           </p>
           <p>
-            Vi har en god blanding av forskjellige ferdigheter, og dermed ønsker vi å jobbe med noe innenfor prosjektutvikling, som vi har erfaring med fra diverse prosjekter gjennom UiA i samarbeid med blant annet Kartverket og Digin, praksis hos Moment Analyse og arbeidsoppdrag fra Daltex Resindekke.
+            Vi har en god blanding av forskjellige ferdigheter, og dermed ønsker vi å jobbe med noe
+            innenfor prosjektutvikling, som vi har erfaring med fra diverse prosjekter gjennom UiA i
+            samarbeid med blant annet Kartverket og Digin, praksis hos Moment Analyse og arbeidsoppdrag
+            fra Daltex Resindekke.
           </p>
         </div>
 
@@ -69,11 +76,12 @@ export default function App() {
           </h1>
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '1.5rem',
-              alignItems: 'center',
-              marginBottom: '3rem',
+              justifyItems: 'center',
+              margin: '0 auto 3rem auto',
+              maxWidth: '700px',
             }}
           >
             {profiles.map((profile, idx) => (
@@ -86,16 +94,21 @@ export default function App() {
                   width: '300px',
                   textAlign: 'center',
                   background: '#fff',
-                  boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                  // Center the last profile in the last row
+                  gridColumn: idx === 4 ? '1 / span 2' : undefined,
+                  justifySelf: idx === 4 ? 'center' : undefined,
                 }}
               >
                 <img
                   src={profile.image}
                   alt={profile.name}
                   style={{
-                    width: '90px',
-                    borderRadius: '50%',
-                    marginBottom: '3rem',
+                    width: '220px',        // større bredde
+                    height: '220px',       // større høyde
+                    objectFit: 'cover',    // behold proporsjoner
+                    borderRadius: '8px',   // litt avrundet hjørner
+                    marginBottom: '2rem',
                     border: '2px solid #719867ff',
                   }}
                 />
