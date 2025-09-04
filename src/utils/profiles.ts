@@ -3,7 +3,7 @@ export const profiles = [
     name: "Thea Svele Corneliussen",
     role: "Prosjektleder, Fullstack-utvikler",
     image: "/src/assets/images/Thea.jpeg",
-    description: "Jeg er 22 år gammel og kommer fra Oslo. Mine største interesser er sikkerhet, prosjektledelse og universell utforming av tjenester. \n Jeg har bakgrunn fra servicebransjen og studerer IT & Informasjonssystemer, med særlig interesse for samspillet mellom mennesker og teknologi. Gjennom studier og prosjekter har jeg fått erfaring med å identifisere brukerbehov og utvikle brukervennlige digitale løsninger. Jeg trives med å kombinere innsikt i menneskers behov med teknologisk forståelse for å skape gode brukeropplevelser.",
+    description: "Jeg er 22 år gammel og kommer fra Oslo. Med bakgrunn fra servicebransjen og med at jeg tar en utdanning i IT & Informasjonssystemer får jeg en unik kombinasjon av teknisk kompetanse og menneskelig forståelse. Som fullstack utvikler trives jeg med å bygge løsninger som både fungerer teknisk og gir en god brukeropplevelse, samtidig som jeg har en sterk interesse for sikkerhet. \n Gjennom studier og prosjekter, hvor jeg også har hatt rollen som prosjektleder, har jeg lært hvor viktig det er å kombinere struktur, samarbeid og kommunikasjon for å levere gode resultater. Jeg motiveres av å forstå brukerbehov og omsette dem til digitale tjenester som gjør en forskjell for både bruker og virksomhet.",
     github: "https://github.com/SveleThea",
     linkedin: "https://www.linkedin.com/in/thea-svele-corneliussen-046a36354/"
   },
@@ -11,7 +11,7 @@ export const profiles = [
     name: "Olivia Fledsberg Petterøe",
     role: "Frontend-utvikler",
     image: "/src/assets/images/Olivia.jpeg",
-    description: "Frontend-utvikler med fokus på UX, interaksjonsdesign og brukervennlige løsJeg er 23 år gammel og kommer fra Tønsberg. Jeg studerer IT og informasjonssystemer og har en spesiell interesse for interaksjonsdesign, brukeropplevelser og UX, i tillegg til frontend-utvikling og sikkerhet. Jeg liker å skape løsninger som er både funksjonelle og brukervennlige, og motiveres av å forstå hvordan mennesker faktisk samhandler med teknologi. \n Dette semesteret har jeg praksisplass hos Moment Analyse, hvor jeg og to andre studenter skal utvikle en app for å registrere selskapets klimaavtrykk. Dette prosjektet gir viktig erfaring med å jobbe i en bedrift, samarbeide tett med oppdragsgiver og levere løsninger som møter virkelige behov.",
+    description: "Jeg er 23 år gammel og kommer fra Tønsberg. Jeg studerer IT og informasjonssystemer og har en spesiell interesse for interaksjonsdesign, brukeropplevelser og UX, i tillegg til frontend-utvikling og sikkerhet. Jeg liker å skape løsninger som er både funksjonelle og brukervennlige, og motiveres av å forstå hvordan mennesker faktisk samhandler med teknologi. \n Dette semesteret har jeg praksisplass hos Moment Analyse, hvor jeg og to andre studenter skal utvikle en app for å registrere selskapets klimaavtrykk. Dette prosjektet gir viktig erfaring med å jobbe i en bedrift, samarbeide tett med oppdragsgiver og levere løsninger som møter virkelige behov.",
     github: "https://github.com/Oliviapetteroe",
     linkedin: "https://www.linkedin.com/in/olivia-petter%C3%B8e/"
   },
