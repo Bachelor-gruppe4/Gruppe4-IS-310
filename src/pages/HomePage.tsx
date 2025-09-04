@@ -74,23 +74,27 @@ export default function HomePage() {
           >
             Team Profiles
           </h1>
+
+          {/* Grid for first 4 profiles */}
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '1.5rem',
-              alignItems: 'center',
-              marginBottom: '3rem',
+              justifyItems: 'center',
+              maxWidth: '600px',
+              width: '100%',
+              margin: '0 auto',
             }}
           >
-            {profiles.map((profile, idx) => (
+            {profiles.slice(0, 4).map((profile, idx) => (
               <div
                 key={idx}
                 style={{
                   border: '1px solid #c2bda9',
                   borderRadius: '10px',
                   padding: '1.5rem',
-                  width: '300px',
+                  width: '260px',
                   textAlign: 'center',
                   background: '#fff',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
@@ -127,6 +131,58 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Centered last profile */}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '2rem',
+              marginBottom: '3rem',
+            }}
+          >
+            <div
+              style={{
+                border: '1px solid #c2bda9',
+                borderRadius: '10px',
+                padding: '1.5rem',
+                width: '300px',
+                textAlign: 'center',
+                background: '#fff',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+              }}
+            >
+              <img
+                src={profiles[4].image}
+                alt={profiles[4].name}
+                style={{
+                  width: '90px',
+                  borderRadius: '50%',
+                  marginBottom: '3rem',
+                  border: '2px solid #719867ff',
+                }}
+              />
+              <h2
+                style={{
+                  fontSize: '1.2rem',
+                  margin: '0.5rem 0',
+                  color: '#3d5229',
+                }}
+              >
+                {profiles[4].name}
+              </h2>
+              <p
+                style={{
+                  width: '90%',
+                  minHeight: '60px',
+                  marginTop: '0.5rem',
+                  color: '#444',
+                }}
+              >
+                {profiles[4].description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
