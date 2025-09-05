@@ -21,14 +21,19 @@ https://gruppe4-is-310-blush.vercel.app
 Follow these steps if you want to run the project locally:
 
 **1. Clone the repository**
-`git clone https://github.com/Bachelor-gruppe4/Gruppe4-IS-310.git
-cd Gruppe4-IS-310`
+
+`git clone https://github.com/Bachelor-gruppe4/Gruppe4-IS-310.git`
+
+`cd Gruppe4-IS-310`
 
 **2. Install dependencies**
+
 `npm install`
 
 **3. Start the development server**
+
 `npm run dev`
 
 Your application should now be running at:
 http://localhost:5173
+
