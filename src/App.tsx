@@ -107,6 +107,23 @@ export default function App() {
             samarbeid med blant annet Kartverket og Digin, praksis hos Moment Analyse og arbeidsoppdrag
             fra Daltex Resindekke.
           </p>
+          <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <Link
+            to="/projects"
+            style={{
+              display: 'inline-block',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '6px',
+              backgroundColor: '#719867',
+              color: '#ffffffff',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '0.9rem',
+            }}
+          >
+            Se våre prosjekter her!
+          </Link>
+        </div>
         </div>
 
         {/* Gruppemedlemmer */}
