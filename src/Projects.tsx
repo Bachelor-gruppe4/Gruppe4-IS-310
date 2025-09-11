@@ -168,7 +168,7 @@ export default function Projects() {
       </div>
 
       {/* Footer */}
-      <footer style={{ marginTop: '4rem' }}>
+      <footer id="contact"> {/* 👈 Anker for "Kontakt"-linken */}
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 1.5rem' }}>
           <h2
             style={{
@@ -183,11 +183,38 @@ export default function Projects() {
           >
             Kontakt oss
           </h2>
-          <p style={{ textAlign: 'center', color: '#3d5229' }}>
-            📧 <a href="mailto:svelethea@gmail.com">svelethea@gmail.com</a>
-            <br />
-            📞 <a href="tel:+4790874373">+47 908 74 373</a>
-          </p>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '2.5rem',
+              color: '#3d5229',
+              fontSize: '1rem',
+              marginBottom: '2rem',
+            }}
+          >
+            {/* E-post */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <svg width="20" height="20" fill="none" stroke="#3d5229" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="#3d5229" />
+                <path d="M3 5l9 7 9-7" stroke="#3d5229" />
+              </svg>
+              <a href="mailto:svelethea@gmail.com" style={{ color: '#3d5229', textDecoration: 'underline' }}>
+                svelethea@gmail.com
+              </a>
+            </div>
+            {/* Telefon */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <svg width="20" height="20" fill="none" stroke="#3d5229" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92V19a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h2.09a2 2 0 012 1.72c.13 1.13.37 2.24.72 3.32a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.58 6.58l1.27-1.27a2 2 0 012.11-.45c1.08.35 2.19.59 3.32.72a2 2 0 011.72 2z" stroke="#3d5229" />
+              </svg>
+              <a href="tel:+4790874373" style={{ color: '#3d5229', textDecoration: 'underline' }}>
+                +47 908 74 373
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
