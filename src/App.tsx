@@ -1,6 +1,9 @@
 import './App.css';
 import { profiles } from './utils/profiles';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import gruppebilde from './assets/images/Gruppebilde.jpeg';
 
 export default function App() {
   return (
@@ -8,28 +11,105 @@ export default function App() {
       {/* Banner */}
       <div
         style={{
-          position: 'fixed',
+          position: 'absolute',
           top: 0,
           left: 0,
-          width: '100%',
-          background: '#ffffff',      
-          color: '#3d5229',              
+          width: '100vw',
+          background: '#ffffff',
+          color: '#3d5229',
           padding: '3rem 0',
-          textAlign: 'center',
+          textAlign: 'left',
+          paddingLeft: '3rem',
           fontSize: '2rem',
           fontWeight: '700',
           letterSpacing: '0.05em',
-          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)', 
+          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
           zIndex: 1000,
         }}
       >
         GRUPPE 4
+
+        {/* Link til Medlemmer */}
+        <a
+          href="#members"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '18rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            paddingRight: '3rem',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Medlemmer
+        </a>
+
+        {/* Link til Prosjekter */}
+        <Link
+          to="/projects"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '10rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            paddingRight: '3rem',
+            fontWeight: 'bold',
+            color: '#3d5229',
+            textDecoration: 'none',
+          }}
+        >
+          Prosjekter
+        </Link>
+
+        {/* Link til Kontakt */}
+        <a
+          href="#contact"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '4rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            paddingRight: '3rem',
+            fontWeight: 'bold',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Kontakt
+        </a>
       </div>
-
-
+{/* Gruppebilde */}
+<div
+  style={{
+    marginTop: '6.5rem', // plass til banneret
+    width: '100vw',      // hele skjermbredden
+    position: 'relative',
+    left: '50%',         // skyver til midten
+    right: '50%',
+    marginLeft: '-50vw', // trekker ut av #root sin midtstilte boks
+    marginRight: '-50vw',
+  }}
+>
+  <img
+    src={gruppebilde}
+    alt="Gruppe 4"
+    style={{
+      width: '100%',
+      height: 'auto',
+      display: 'block',
+    }}
+  />
+</div>
 
       {/* Content */}
-      <div style={{ marginTop: '8rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         {/* Om oss */}
         <div
           style={{
@@ -55,11 +135,39 @@ export default function App() {
             samarbeid med blant annet Kartverket og Digin, praksis hos Moment Analyse og arbeidsoppdrag
             fra Daltex Resindekke.
           </p>
+          <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <Link
+            to="/projects"
+            style={{
+              display: 'inline-block',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '6px',
+              backgroundColor: '#719867',
+              color: '#ffffffff',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '0.9rem',
+            }}
+          >
+            Se våre prosjekter her!
+          </Link>
         </div>
+        </div>
+
+        {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            margin: '1rem auto', // sentrert og med litt luft rundt
+          }}
+        ></div>
 
         {/* Gruppemedlemmer */}
         <div>
           <h1
+            id="members" // 👈 Anker for "Medlemmer"-linken
             style={{
               textAlign: 'center',
               color: '#719867ff',
@@ -109,16 +217,7 @@ export default function App() {
                     }}
                   />
 
-                  <h3
-                    style={{
-                      fontSize: '1rem',
-                      margin: '0 0 0.5rem 0',
-                      color: '#666',
-                      fontWeight: 'normal',
-                    }}
-                  >
-                    {profile.role}
-                  </h3>
+                  <h3 style={{ fontSize: '1rem', margin: '0 0 0.5rem 0', color: '#3d5229', fontWeight: 'normal', }} > {profile.role} </h3>
 
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <a href={profile.github} target="_blank" rel="noopener noreferrer">
@@ -144,68 +243,131 @@ export default function App() {
 
                   {/* Description with spacing at \n */}
                   {profile.description.split('\n').map((line, idx) => (
-                    <p key={idx} style={{ margin: '0 0 2rem 0', lineHeight: 1.5 }}>
+                    <p key={idx} style={{ margin: '0 0 0.8rem 0', lineHeight: 1.5 }}>
                       {line}
                     </p>
                   ))}
+
+                  {/* State for å vise ekstra fag */}
+                  <ExtraInfo valgemner={profile.valgemner} />
                 </div>
               </div>
             ))}
-            </div>
+          </div>
         </div>
       </div>
 
-          {/* Footer */}
-          <footer>
-            <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 1.5rem' }}>
-              <h2
-                style={{
-                  fontSize: '1rem',
-                  fontWeight: 'bold',
-                  color: '#3d5229',
-                  marginBottom: '1.5rem',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  textAlign: 'center',
-                }}
-              >
-                Kontakt oss
-              </h2>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  gap: '2.5rem',
-                  color: '#3d5229',
-                  fontSize: '1rem',
-                  marginBottom: '2rem',
-                }}
-              >
-                {/* E-post */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <svg width="20" height="20" fill="none" stroke="#3d5229" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="#3d5229" />
-                    <path d="M3 5l9 7 9-7" stroke="#3d5229" />
-                  </svg>
-                  <a href="mailto:svelethea@gmail.com" style={{ color: '#3d5229', textDecoration: 'underline' }}>
-                    svelethea@gmail.com
-                  </a>
-                </div>
-                {/* Telefon */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <svg width="20" height="20" fill="none" stroke="#3d5229" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 16.92V19a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h2.09a2 2 0 012 1.72c.13 1.13.37 2.24.72 3.32a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.58 6.58l1.27-1.27a2 2 0 012.11-.45c1.08.35 2.19.59 3.32.72a2 2 0 011.72 2z" stroke="#3d5229" />
-                  </svg>
-                  <a href="tel:+4790874373" style={{ color: '#3d5229', textDecoration: 'underline' }}>
-                    +47 908 74 373
-                  </a>
-                </div>
-              </div>
+      {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            margin: '3rem auto', // sentrert og med litt luft rundt
+          }}
+        ></div>
+
+      {/* Footer */}
+      <footer id="contact"> {/* 👈 Anker for "Kontakt"-linken */}
+        <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2
+            style={{
+              fontSize: '1rem',
+              fontWeight: 'bold',
+              color: '#3d5229',
+              marginBottom: '1.5rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              textAlign: 'center',
+            }}
+          >
+            Kontakt oss
+          </h2>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '2.5rem',
+              color: '#3d5229',
+              fontSize: '1rem',
+              marginBottom: '2rem',
+            }}
+          >
+            {/* E-post */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <svg width="20" height="20" fill="none" stroke="#3d5229" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="#3d5229" />
+                <path d="M3 5l9 7 9-7" stroke="#3d5229" />
+              </svg>
+              <a href="mailto:svelethea@gmail.com" style={{ color: '#3d5229', textDecoration: 'underline' }}>
+                svelethea@gmail.com
+              </a>
             </div>
-          </footer>
+            {/* Telefon */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <svg width="20" height="20" fill="none" stroke="#3d5229" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92V19a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h2.09a2 2 0 012 1.72c.13 1.13.37 2.24.72 3.32a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.58 6.58l1.27-1.27a2 2 0 012.11-.45c1.08.35 2.19.59 3.32.72a2 2 0 011.72 2z" stroke="#3d5229" />
+              </svg>
+              <a href="tel:+4790874373" style={{ color: '#3d5229', textDecoration: 'underline' }}>
+                +47 908 74 373
+              </a>
+            </div>
           </div>
+        </div>
+      </footer>
+    </div>
   );
 }
 
+type ExtraInfoProps = {
+  valgemner: string[];
+};
+
+function ExtraInfo({ valgemner }: ExtraInfoProps) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        style={{
+          display: 'inline-block',
+          padding: '0.5rem 1.2rem',
+          borderRadius: '6px',
+          backgroundColor: '#719867',
+          color: '#fff',
+          border: 'none',
+          cursor: 'pointer',
+          fontWeight: 'bold',
+          fontSize: '0.85rem',
+          marginTop: '0.5rem',
+        }}
+        onClick={() => setOpen(!open)}
+      >
+        {open ? 'Skjul valgemner' : 'Se valgemner'}
+      </button>
+
+      {open && (
+        <div
+          style={{
+            marginTop: '0.8rem',
+            padding: '0.8rem',
+            border: '1px solid #719867',
+            borderRadius: '6px',
+            backgroundColor: '#f9f9f9',
+          }}
+        >
+          <h4 style={{ margin: '0 0 0.5rem 0', color: '#3d5229' }}>Valgemner:</h4>
+          <ul style={{ paddingLeft: '1.2rem', margin: 0 }}>
+            {valgemner.map((fag: string, idx: number) => (
+              <li key={idx} style={{ marginBottom: '0.3rem' }}>
+                {fag}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
