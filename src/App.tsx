@@ -2,6 +2,7 @@ import './App.css';
 import { profiles } from './utils/profiles';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function App() {
   return (
@@ -189,19 +190,7 @@ export default function App() {
                     }}
                   />
 
-                  <div
-                    style={{
-                      display: 'inline-block',
-                      padding: '0.4rem 1rem',       // litt mindre enn knappen
-                      borderRadius: '6px',
-                      color: '#3d5229',
-                      fontWeight: 'bold',
-                      fontSize: '0.9rem',
-                      marginBottom: '0.5rem',       // litt avstand under badge
-                    }}
-                  >
-                    {profile.role}
-                  </div>
+                  <h3 style={{ fontSize: '1rem', margin: '0 0 0.5rem 0', color: '#3d5229', fontWeight: 'normal', }} > {profile.role} </h3>
 
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <a href={profile.github} target="_blank" rel="noopener noreferrer">
@@ -227,10 +216,13 @@ export default function App() {
 
                   {/* Description with spacing at \n */}
                   {profile.description.split('\n').map((line, idx) => (
-                    <p key={idx} style={{ margin: '0 0 2rem 0', lineHeight: 1.5 }}>
+                    <p key={idx} style={{ margin: '0 0 0.8rem 0', lineHeight: 1.5 }}>
                       {line}
                     </p>
                   ))}
+
+                  {/* State for å vise ekstra fag */}
+                  <ExtraInfo valgemner={profile.valgemner} />
                 </div>
               </div>
             ))}
@@ -288,6 +280,57 @@ export default function App() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+type ExtraInfoProps = {
+  valgemner: string[];
+};
+
+function ExtraInfo({ valgemner }: ExtraInfoProps) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        style={{
+          display: 'inline-block',
+          padding: '0.5rem 1.2rem',
+          borderRadius: '6px',
+          backgroundColor: '#719867',
+          color: '#fff',
+          border: 'none',
+          cursor: 'pointer',
+          fontWeight: 'bold',
+          fontSize: '0.85rem',
+          marginTop: '0.5rem',
+        }}
+        onClick={() => setOpen(!open)}
+      >
+        {open ? 'Skjul valgemner' : 'Se valgemner'}
+      </button>
+
+      {open && (
+        <div
+          style={{
+            marginTop: '0.8rem',
+            padding: '0.8rem',
+            border: '1px solid #719867',
+            borderRadius: '6px',
+            backgroundColor: '#f9f9f9',
+          }}
+        >
+          <h4 style={{ margin: '0 0 0.5rem 0', color: '#3d5229' }}>Valgemner:</h4>
+          <ul style={{ paddingLeft: '1.2rem', margin: 0 }}>
+            {valgemner.map((fag: string, idx: number) => (
+              <li key={idx} style={{ marginBottom: '0.3rem' }}>
+                {fag}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
