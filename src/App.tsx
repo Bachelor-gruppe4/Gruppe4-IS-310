@@ -18,7 +18,8 @@ export default function App() {
           background: '#ffffff',
           color: '#3d5229',
           padding: '3rem 0',
-          textAlign: 'center',
+          textAlign: 'left',
+          paddingLeft: '3rem',
           fontSize: '2rem',
           fontWeight: '700',
           letterSpacing: '0.05em',
@@ -38,6 +39,7 @@ export default function App() {
             transform: 'translateY(-50%)',
             fontSize: '1rem',
             fontWeight: 'bold',
+            paddingRight: '3rem',
             color: '#3d5229',
             textDecoration: 'none',
             cursor: 'pointer',
@@ -55,6 +57,7 @@ export default function App() {
             right: '10rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
+            paddingRight: '3rem',
             fontWeight: 'bold',
             color: '#3d5229',
             textDecoration: 'none',
@@ -72,6 +75,7 @@ export default function App() {
             right: '4rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
+            paddingRight: '3rem',
             fontWeight: 'bold',
             color: '#3d5229',
             textDecoration: 'none',
@@ -104,11 +108,8 @@ export default function App() {
   />
 </div>
 
-
-
-
       {/* Content */}
-      <div style={{ marginTop: '8rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         {/* Om oss */}
         <div
           style={{
@@ -255,6 +256,16 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            margin: '3rem auto', // sentrert og med litt luft rundt
+          }}
+        ></div>
 
       {/* Footer */}
       <footer id="contact"> {/* 👈 Anker for "Kontakt"-linken */}
