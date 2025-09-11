@@ -1,44 +1,57 @@
 // src/Projects.tsx
+import MomentAnalyseLogo from './assets/images/MomentAnalyse.webp';
+import DaltexLogo from './assets/images/DaltexResindekke.jpg';
+import DiginLogo from './assets/images/Digin.png';
+import KartverketLogo from './assets/images/Kartverket.png';
+import DisasterLogo from './assets/images/DisasterAlert.png';
+
 export default function Projects() {
-  // Midlertidig hardkodede prosjekter – kan flyttes til utils/projects.ts senere
   const projects = [
     {
       title: "Praksis: Moment Analyse",
-      logo: "/logos/moment.png", // legg et bilde i public/logos/
+      logo: MomentAnalyseLogo,
       link: "https://odalopheim.github.io/Praksis/index.html",
       description: `Praksisen involverer å utvikle en digital plattform som skal gjøre det enkelt
       for bedriften å registrere og holde oversikt over sine CO₂-utslipp. Målet er å forenkle
-      prosessen med å samle inn og strukturere miljødata, slik at det blir raskere og mer
-      oversiktlig å sende inn nødvendig dokumentasjon for å oppnå miljøsertifisering.`,
+      prosessen med å samle inn og strukturere miljødata, slik at det blir både raskere og mer
+      oversiktlig å sende inn nødvendig dokumentasjon for å oppnå miljøsertifisering i tråd med
+      kravene til Miljøfyrtårnet. Løsningen skal bidra til å redusere manuelt arbeid, øke
+      nøyaktigheten i rapporteringen og gi selskapet bedre innsikt i sitt eget klimafotavtrykk.`,
       status: "Pågående",
     },
     {
       title: "Daltex Resindekke",
-      logo: "/logos/daltex.png",
-      description: "Beskrivelse av oppgave kommer her.",
+      logo: DaltexLogo,
+      description: `Beskrivelse av oppgave: Arbeidsoppdrag for Daltex Resindekke.`,
       status: "Pågående",
     },
     {
       title: "Digin (IS-112)",
-      logo: "/logos/digin.png",
-      description: `Utvikling av en digital samarbeidsplattform for SMB-er i IT-klyngen Digin.
-      Plattformen skal gjøre det enklere å synliggjøre tjenester, dele kompetanse og finne
-      samarbeidspartnere.`,
+      logo: DiginLogo,
+      description: `Gruppen utviklet et forslag til en digital samarbeidsplattform for små og mellomstore bedrifter (SMB-er) i IT-klyngen Digin. Plattformen skal gjøre det enklere for medlemsbedrifter å synliggjøre tjenester, dele kompetanse og finne relevante samarbeidspartnere lokalt.
+      Gjennom tjenestedesign kartla gruppen utfordringer som manglende strukturert samarbeid, lav synlighet og lite utnyttelse av ressurser på tvers. Prototypen ble laget i Figma og testet med bedrifter og Digin-representanter, og ble vurdert som ønskelig, gjennomførbar og bærekraftig.`,
+      link: "https://www.figma.com/proto/xhUb0Z5p1SOfQEz1e98avZ/Digin-prototype?node-id=4-2&starting-point-node-id=4%3A2",
       status: "Fullført",
     },
     {
       title: "Kartverket (3. semester)",
-      logo: "/logos/kartverket.png",
-      description: `Utvikling av nytt feilmeldingssystem for kartdata. Gjør det enklere for publikum
-      å melde inn feil og for saksbehandlere å behandle og følge opp meldinger.`,
+      logo: KartverketLogo,
+      description: `Utvikling av et nytt feilmeldingssystem for Kartverket som gjør det enklere og mer brukervennlig å melde inn feil i kartdata, samtidig som saksbehandlingen internt effektiviseres.
+      Løsningen ble utviklet som en nettbasert plattform med brukerkontoer, feilmeldinger i kartet, og et grensesnitt for saksbehandlere. Prosjektet ble gjennomført med Scrum og fokus på brukervennlighet, tilgjengelighet, sikkerhet og skalerbarhet.`,
+      link: "https://github.com/Kartverket-gruppe4/Kartverket.MVC.4",
+      extraLinks: [
+        { label: "YouTube demo", url: "https://youtu.be/ivGk9-J2QOk" }
+      ],
       status: "Fullført",
     },
     {
       title: "Disaster Alert (IS-217)",
-      logo: "/logos/disaster.png",
-      description: `Forbedring av nettsiden Disaster Alert med fokus på universell utforming og
-      tilgjengelighet. Brukertesting og redesign resulterte i en mer intuitiv og inkluderende
-      prototype.`,
+      logo: DisasterLogo,
+      description: `Prosjektet tok for seg en helhetlig vurdering og forbedring av nettsiden Disaster Alert, med fokus på universell utforming og brukervennlighet. Gjennom brukertesting, scenariotesting og heuristisk evaluering ble det laget en forbedret prototype som er mer intuitiv og inkluderende.`,
+      link: "https://www.figma.com/proto/9TGrFwXk0C4O0lrZXCeP0O/Disaster-Alert?node-id=2-273&starting-point-node-id=2%3A273&t=qDI0ZjDrsvRW7myW-1",
+      extraLinks: [
+        { label: "Original nettside", url: "https://disasteralert.pdc.org/disasteralert/" }
+      ],
       status: "Fullført",
     },
   ];
@@ -48,7 +61,7 @@ export default function Projects() {
       {/* Banner */}
       <div
         style={{
-          position: 'fixed',
+          position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
@@ -78,7 +91,7 @@ export default function Projects() {
                 key={idx}
                 style={{
                   display: 'flex',
-                  alignItems: 'flex-start',
+                  alignItems: 'center',
                   gap: '1.5rem',
                   border: '1px solid #c2bda9',
                   borderRadius: '10px',
@@ -87,18 +100,30 @@ export default function Projects() {
                   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
                 }}
               >
-                <img
-                  src={p.logo}
-                  alt={p.title}
-                  style={{
-                    width: '120px',
-                    height: '120px',
-                    objectFit: 'contain',
-                    borderRadius: '8px',
-                    border: '1px solid #719867ff',
-                    background: '#fff',
-                  }}
-                />
+                <div
+  style={{
+    width: '140px',
+    height: '140px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid #719867ff',
+    borderRadius: '8px',
+    background: '#fff',
+    flexShrink: 0,
+  }}
+>
+  <img
+    src={p.logo}
+    alt={p.title}
+    style={{
+      maxWidth: '100%',
+      maxHeight: '100%',
+      objectFit: 'contain',
+    }}
+  />
+</div>
+
                 <div style={{ flex: 1, textAlign: 'left' }}>
                   <h3 style={{ color: '#3d5229', marginBottom: '0.5rem' }}>{p.title}</h3>
                   <p style={{ lineHeight: 1.5 }}>{p.description}</p>
@@ -107,11 +132,22 @@ export default function Projects() {
                       href={p.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#0A66C2' }}
+                      style={{ color: '#0A66C2', marginRight: '1rem' }}
                     >
                       Se prosjekt
                     </a>
                   )}
+                  {p.extraLinks && p.extraLinks.map((el, i) => (
+                    <a
+                      key={i}
+                      href={el.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: '#0A66C2', marginRight: '1rem' }}
+                    >
+                      {el.label}
+                    </a>
+                  ))}
                 </div>
               </div>
             ))}
@@ -127,7 +163,7 @@ export default function Projects() {
                 key={idx}
                 style={{
                   display: 'flex',
-                  alignItems: 'flex-start',
+                  alignItems: 'center',
                   gap: '1.5rem',
                   border: '1px solid #c2bda9',
                   borderRadius: '10px',
@@ -136,18 +172,30 @@ export default function Projects() {
                   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
                 }}
               >
-                <img
-                  src={p.logo}
-                  alt={p.title}
-                  style={{
-                    width: '120px',
-                    height: '120px',
-                    objectFit: 'contain',
-                    borderRadius: '8px',
-                    border: '1px solid #719867ff',
-                    background: '#fff',
-                  }}
-                />
+                <div
+  style={{
+    width: '140px',
+    height: '140px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid #719867ff',
+    borderRadius: '8px',
+    background: '#fff',
+    flexShrink: 0,
+  }}
+>
+  <img
+    src={p.logo}
+    alt={p.title}
+    style={{
+      maxWidth: '100%',
+      maxHeight: '100%',
+      objectFit: 'contain',
+    }}
+  />
+</div>
+
                 <div style={{ flex: 1, textAlign: 'left' }}>
                   <h3 style={{ color: '#3d5229', marginBottom: '0.5rem' }}>{p.title}</h3>
                   <p style={{ lineHeight: 1.5 }}>{p.description}</p>
@@ -156,16 +204,28 @@ export default function Projects() {
                       href={p.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#0A66C2' }}
+                      style={{ color: '#0A66C2', marginRight: '1rem' }}
                     >
                       Se prosjekt
                     </a>
                   )}
+                  {p.extraLinks && p.extraLinks.map((el, i) => (
+                    <a
+                      key={i}
+                      href={el.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: '#0A66C2', marginRight: '1rem' }}
+                    >
+                      {el.label}
+                    </a>
+                  ))}
                 </div>
               </div>
             ))}
         </div>
       </div>
+
 
       {/* Footer */}
       <footer id="contact"> {/* 👈 Anker for "Kontakt"-linken */}
