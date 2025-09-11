@@ -26,13 +26,31 @@ export default function App() {
       >
         GRUPPE 4
 
-        {/* Tekstlink til Prosjekter */}
+        {/* Link til Medlemmer */}
+        <a
+          href="#members"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '18rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Medlemmer
+        </a>
+
+        {/* Link til Prosjekter */}
         <Link
           to="/projects"
           style={{
             position: 'absolute',
             top: '50%',
-            right: '12rem',
+            right: '10rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
             fontWeight: 'bold',
@@ -42,6 +60,24 @@ export default function App() {
         >
           Prosjekter
         </Link>
+
+        {/* Link til Kontakt */}
+        <a
+          href="#contact"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '4rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Kontakt
+        </a>
       </div>
 
       {/* Content */}
@@ -76,6 +112,7 @@ export default function App() {
         {/* Gruppemedlemmer */}
         <div>
           <h1
+            id="members" // 👈 Anker for "Medlemmer"-linken
             style={{
               textAlign: 'center',
               color: '#719867ff',
@@ -172,7 +209,7 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer>
+      <footer id="contact"> {/* 👈 Anker for "Kontakt"-linken */}
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 1.5rem' }}>
           <h2
             style={{
