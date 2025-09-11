@@ -1,4 +1,48 @@
+// src/Projects.tsx
 export default function Projects() {
+  // Midlertidig hardkodede prosjekter – kan flyttes til utils/projects.ts senere
+  const projects = [
+    {
+      title: "Praksis: Moment Analyse",
+      logo: "/logos/moment.png", // legg et bilde i public/logos/
+      link: "https://odalopheim.github.io/Praksis/index.html",
+      description: `Praksisen involverer å utvikle en digital plattform som skal gjøre det enkelt
+      for bedriften å registrere og holde oversikt over sine CO₂-utslipp. Målet er å forenkle
+      prosessen med å samle inn og strukturere miljødata, slik at det blir raskere og mer
+      oversiktlig å sende inn nødvendig dokumentasjon for å oppnå miljøsertifisering.`,
+      status: "Pågående",
+    },
+    {
+      title: "Daltex Resindekke",
+      logo: "/logos/daltex.png",
+      description: "Beskrivelse av oppgave kommer her.",
+      status: "Pågående",
+    },
+    {
+      title: "Digin (IS-112)",
+      logo: "/logos/digin.png",
+      description: `Utvikling av en digital samarbeidsplattform for SMB-er i IT-klyngen Digin.
+      Plattformen skal gjøre det enklere å synliggjøre tjenester, dele kompetanse og finne
+      samarbeidspartnere.`,
+      status: "Fullført",
+    },
+    {
+      title: "Kartverket (3. semester)",
+      logo: "/logos/kartverket.png",
+      description: `Utvikling av nytt feilmeldingssystem for kartdata. Gjør det enklere for publikum
+      å melde inn feil og for saksbehandlere å behandle og følge opp meldinger.`,
+      status: "Fullført",
+    },
+    {
+      title: "Disaster Alert (IS-217)",
+      logo: "/logos/disaster.png",
+      description: `Forbedring av nettsiden Disaster Alert med fokus på universell utforming og
+      tilgjengelighet. Brukertesting og redesign resulterte i en mer intuitiv og inkluderende
+      prototype.`,
+      status: "Fullført",
+    },
+  ];
+
   return (
     <div>
       {/* Banner */}
@@ -22,11 +66,105 @@ export default function Projects() {
         VÅRE PROSJEKTER
       </div>
 
-      {/* Placeholder content */}
-      <div style={{ marginTop: '8rem', padding: '2rem', textAlign: 'center' }}>
-        <p style={{ color: '#3d5229', fontSize: '1.2rem' }}>
-          Prosjektene våre vil bli lagt til her snart.
-        </p>
+      {/* Prosjektboksene */}
+      <div style={{ marginTop: '10rem', padding: '2rem' }}>
+        {/* Pågående prosjekter */}
+        <h2 style={{ color: '#719867ff', marginBottom: '1.5rem' }}>Pågående</h2>
+        <div style={{ display: 'grid', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}>
+          {projects
+            .filter((p) => p.status === "Pågående")
+            .map((p, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '1.5rem',
+                  border: '1px solid #c2bda9',
+                  borderRadius: '10px',
+                  padding: '1.5rem',
+                  background: '#fff',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                }}
+              >
+                <img
+                  src={p.logo}
+                  alt={p.title}
+                  style={{
+                    width: '120px',
+                    height: '120px',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    border: '1px solid #719867ff',
+                    background: '#fff',
+                  }}
+                />
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <h3 style={{ color: '#3d5229', marginBottom: '0.5rem' }}>{p.title}</h3>
+                  <p style={{ lineHeight: 1.5 }}>{p.description}</p>
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: '#0A66C2' }}
+                    >
+                      Se prosjekt
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+        </div>
+
+        {/* Fullførte prosjekter */}
+        <h2 style={{ color: '#719867ff', margin: '3rem 0 1.5rem' }}>Fullførte</h2>
+        <div style={{ display: 'grid', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}>
+          {projects
+            .filter((p) => p.status === "Fullført")
+            .map((p, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '1.5rem',
+                  border: '1px solid #c2bda9',
+                  borderRadius: '10px',
+                  padding: '1.5rem',
+                  background: '#fff',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                }}
+              >
+                <img
+                  src={p.logo}
+                  alt={p.title}
+                  style={{
+                    width: '120px',
+                    height: '120px',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    border: '1px solid #719867ff',
+                    background: '#fff',
+                  }}
+                />
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <h3 style={{ color: '#3d5229', marginBottom: '0.5rem' }}>{p.title}</h3>
+                  <p style={{ lineHeight: 1.5 }}>{p.description}</p>
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: '#0A66C2' }}
+                    >
+                      Se prosjekt
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
 
       {/* Footer */}
