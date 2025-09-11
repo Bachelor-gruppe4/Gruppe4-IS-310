@@ -2,6 +2,10 @@ import './App.css';
 import { profiles } from './utils/profiles';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import gruppebilde from './assets/images/Gruppebilde.jpeg';
+
+
+
 
 export default function App() {
   return (
@@ -79,6 +83,31 @@ export default function App() {
           Kontakt
         </a>
       </div>
+{/* Gruppebilde */}
+<div
+  style={{
+    marginTop: '6.5rem', // plass til banneret
+    width: '100vw',      // hele skjermbredden
+    position: 'relative',
+    left: '50%',         // skyver til midten
+    right: '50%',
+    marginLeft: '-50vw', // trekker ut av #root sin midtstilte boks
+    marginRight: '-50vw',
+  }}
+>
+  <img
+    src={gruppebilde}
+    alt="Gruppe 4"
+    style={{
+      width: '100%',
+      height: 'auto',
+      display: 'block',
+    }}
+  />
+</div>
+
+
+
 
       {/* Content */}
       <div style={{ marginTop: '8rem' }}>
