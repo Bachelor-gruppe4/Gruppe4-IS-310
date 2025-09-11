@@ -126,6 +126,16 @@ export default function App() {
         </div>
         </div>
 
+        {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            margin: '1rem auto', // sentrert og med litt luft rundt
+          }}
+        ></div>
+
         {/* Gruppemedlemmer */}
         <div>
           <h1
@@ -179,16 +189,19 @@ export default function App() {
                     }}
                   />
 
-                  <h3
+                  <div
                     style={{
-                      fontSize: '1rem',
-                      margin: '0 0 0.5rem 0',
-                      color: '#666',
-                      fontWeight: 'normal',
+                      display: 'inline-block',
+                      padding: '0.4rem 1rem',       // litt mindre enn knappen
+                      borderRadius: '6px',
+                      color: '#3d5229',
+                      fontWeight: 'bold',
+                      fontSize: '0.9rem',
+                      marginBottom: '0.5rem',       // litt avstand under badge
                     }}
                   >
                     {profile.role}
-                  </h3>
+                  </div>
 
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <a href={profile.github} target="_blank" rel="noopener noreferrer">
