@@ -39,7 +39,7 @@ export default function App() {
             transform: 'translateY(-50%)',
             fontSize: '1rem',
             fontWeight: 'bold',
-            paddingRight: '3rem',
+            paddingRight: '6rem',
             color: '#3d5229',
             textDecoration: 'none',
             cursor: 'pointer',
@@ -57,7 +57,7 @@ export default function App() {
             right: '10rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
-            paddingRight: '3rem',
+            paddingRight: '6rem',
             fontWeight: 'bold',
             color: '#3d5229',
             textDecoration: 'none',
@@ -82,7 +82,7 @@ export default function App() {
             cursor: 'pointer',
           }}
         >
-          Kontakt
+          Kontakt oss
         </a>
       </div>
 {/* Gruppebilde */}
