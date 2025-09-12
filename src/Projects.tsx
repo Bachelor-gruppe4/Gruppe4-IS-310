@@ -4,6 +4,7 @@ import DaltexLogo from './assets/images/DaltexResindekke.jpg';
 import DiginLogo from './assets/images/Digin.png';
 import KartverketLogo from './assets/images/Kartverket.png';
 import DisasterLogo from './assets/images/DisasterAlert.png';
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   const projects = [
@@ -68,19 +69,84 @@ export default function Projects() {
           background: '#ffffff',
           color: '#3d5229',
           padding: '3rem 0',
-          textAlign: 'center',
+          textAlign: 'left',
+          paddingLeft: '3rem',
           fontSize: '2rem',
           fontWeight: '700',
           letterSpacing: '0.05em',
-          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
           zIndex: 1000,
+          borderBottom: '2px solid #719867ff',
         }}
       >
-        VÅRE PROSJEKTER
+        GRUPPE 4
+
+        {/* Link til Hjem */}
+          <Link
+            to="/"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              right: '14rem',
+              transform: 'translateY(-50%)',
+              fontSize: '1rem',
+              fontWeight: 'bold',
+              paddingRight: '3rem',
+              color: '#3d5229',
+              textDecoration: 'none',
+            }}
+          >
+            Hjem
+          </Link>
+
+        {/* Link til Kontakt */}
+          <a
+            href="#contact"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              right: '4rem',
+              transform: 'translateY(-50%)',
+              fontSize: '1rem',
+              paddingRight: '3rem',
+              fontWeight: 'bold',
+              color: '#3d5229',
+              textDecoration: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            Kontakt oss
+          </a>
       </div>
 
+      {/* Hovedoverskrift for prosjekter */}
+        <h2
+          style={{
+            color: '#3d5229',
+            marginTop: '10rem',   // lager luft så den ikke kolliderer med banneret
+            marginBottom: '1rem',
+            textAlign: 'center',
+            fontSize: '2rem',
+          }}
+        >
+          VÅRE PROSJEKTER
+        </h2>
+
+      {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            marginTop: '3rem', // sentrert og med litt luft rundt
+            marginBottom: '0.5rem',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        ></div>
+
       {/* Prosjektboksene */}
-      <div style={{ marginTop: '10rem', padding: '2rem' }}>
+      <div style={{ marginTop: '0rem', padding: '1rem' }}>
+
         {/* Pågående prosjekter */}
         <h2 style={{ color: '#719867ff', marginBottom: '1.5rem' }}>Pågående</h2>
         <div style={{ display: 'grid', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}>
@@ -101,28 +167,28 @@ export default function Projects() {
                 }}
               >
                 <div
-  style={{
-    width: '140px',
-    height: '140px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid #719867ff',
-    borderRadius: '8px',
-    background: '#fff',
-    flexShrink: 0,
-  }}
->
-  <img
-    src={p.logo}
-    alt={p.title}
-    style={{
-      maxWidth: '100%',
-      maxHeight: '100%',
-      objectFit: 'contain',
-    }}
-  />
-</div>
+                  style={{
+                    width: '140px',
+                    height: '140px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    border: '1px solid #719867ff',
+                    borderRadius: '8px',
+                    background: '#fff',
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src={p.logo}
+                    alt={p.title}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain',
+                    }}
+                  />
+                </div>
 
                 <div style={{ flex: 1, textAlign: 'left' }}>
                   <h3 style={{ color: '#3d5229', marginBottom: '0.5rem' }}>{p.title}</h3>
@@ -132,7 +198,17 @@ export default function Projects() {
                       href={p.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#0A66C2', marginRight: '1rem' }}
+                      style={{
+                        display: 'inline-block',
+                        padding: '0.6rem 1.2rem',
+                        borderRadius: '6px',
+                        backgroundColor: '#719867',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        fontWeight: 'bold',
+                        fontSize: '0.85rem',
+                        marginRight: '1rem',
+                      }}
                     >
                       Se prosjekt
                     </a>
@@ -143,7 +219,17 @@ export default function Projects() {
                       href={el.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#0A66C2', marginRight: '1rem' }}
+                      style={{
+                        display: 'inline-block',
+                        padding: '0.6rem 1.2rem',
+                        borderRadius: '6px',
+                        backgroundColor: '#719867',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        fontWeight: 'bold',
+                        fontSize: '0.85rem',
+                        marginRight: '1rem',
+                      }}
                     >
                       {el.label}
                     </a>
@@ -152,6 +238,16 @@ export default function Projects() {
               </div>
             ))}
         </div>
+
+        {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            margin: '3rem auto', // sentrert og med litt luft rundt
+          }}
+        ></div>
 
         {/* Fullførte prosjekter */}
         <h2 style={{ color: '#719867ff', margin: '3rem 0 1.5rem' }}>Fullførte</h2>
@@ -173,28 +269,28 @@ export default function Projects() {
                 }}
               >
                 <div
-  style={{
-    width: '140px',
-    height: '140px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid #719867ff',
-    borderRadius: '8px',
-    background: '#fff',
-    flexShrink: 0,
-  }}
->
-  <img
-    src={p.logo}
-    alt={p.title}
-    style={{
-      maxWidth: '100%',
-      maxHeight: '100%',
-      objectFit: 'contain',
-    }}
-  />
-</div>
+                  style={{
+                    width: '140px',
+                    height: '140px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    border: '1px solid #719867ff',
+                    borderRadius: '8px',
+                    background: '#fff',
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src={p.logo}
+                    alt={p.title}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain',
+                    }}
+                  />
+                </div>
 
                 <div style={{ flex: 1, textAlign: 'left' }}>
                   <h3 style={{ color: '#3d5229', marginBottom: '0.5rem' }}>{p.title}</h3>
@@ -204,7 +300,17 @@ export default function Projects() {
                       href={p.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#0A66C2', marginRight: '1rem' }}
+                      style={{
+                        display: 'inline-block',
+                        padding: '0.6rem 1.2rem',
+                        borderRadius: '6px',
+                        backgroundColor: '#719867',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        fontWeight: 'bold',
+                        fontSize: '0.85rem',
+                        marginRight: '1rem',
+                      }}
                     >
                       Se prosjekt
                     </a>
@@ -215,7 +321,17 @@ export default function Projects() {
                       href={el.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#0A66C2', marginRight: '1rem' }}
+                      style={{
+                        display: 'inline-block',
+                        padding: '0.6rem 1.2rem',
+                        borderRadius: '6px',
+                        backgroundColor: '#719867',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        fontWeight: 'bold',
+                        fontSize: '0.85rem',
+                        marginRight: '1rem',
+                      }}
                     >
                       {el.label}
                     </a>
@@ -225,6 +341,16 @@ export default function Projects() {
             ))}
         </div>
       </div>
+
+      {/* Divider */}
+        <div
+          style={{
+            width: '60%',
+            height: '2px',
+            backgroundColor: '#719867',
+            margin: '3rem auto', // sentrert og med litt luft rundt
+          }}
+        ></div>
 
 
       {/* Footer */}
