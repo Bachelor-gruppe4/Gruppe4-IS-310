@@ -21,7 +21,7 @@ export const profiles = [
     description: "Jeg er 23 år gammel og kommer fra Tønsberg. Jeg studerer IT og informasjonssystemer og har en spesiell interesse for interaksjonsdesign, brukeropplevelser og UX, i tillegg til frontend-utvikling og sikkerhet. Jeg liker å skape løsninger som er både funksjonelle og brukervennlige, og motiveres av å forstå hvordan mennesker faktisk samhandler med teknologi. \nDette semesteret har jeg praksisplass hos Moment Analyse, hvor jeg og to andre studenter skal utvikle en app for å registrere selskapets klimaavtrykk. Dette prosjektet gir viktig erfaring med å jobbe i en bedrift, samarbeide tett med oppdragsgiver og levere løsninger som møter virkelige behov.",
     github: "https://github.com/Oliviapetteroe",
     linkedin: "https://www.linkedin.com/in/olivia-petter%C3%B8e/",
-    valgemner: ["Webutvikling", "Datasikkerhet", "Maskinlæring"]
+    valgemner: ["IS-217 - Universell Utforming av Informasjonssystemer", "TFL-119 - IT og Samfunnsendringer", "IS-214 - Information Systems Security", "IS-302 - Praksisprosjekt", "ME-100 - Sammfunnsvitenskapelig metode"],
   },
   {
     name: "Vilde Christensen",
@@ -48,6 +48,6 @@ export const profiles = [
     description: "Jeg er en 21 år gammel IT-student fra Lillesand, med hovedinteresse for backend-utvikling. Jeg liker å forstå hvordan systemer henger sammen, og arbeider målrettet for å utvikle løsninger som er både effektive og driftssikre. Samtidig ser jeg verdien av godt samarbeid og kunnskapsdeling for å oppnå best mulige resultater. \nVed siden av studiet jobber jeg for tiden med utvikling av applikasjon for en oppstartsbedrift; Daltex Resindekke. Prosjektet gir meg verdifull erfaring med hele utviklingsprosessen - fra kravavklaring og planlegging til implementering og samarbeid i team. Dette har gitt meg innsikt i hvordan man leverer løsninger som møter faktiske behov hos en oppdragsgiver.",
     github: "https://github.com/annaoestmoen",
     linkedin: "https://www.linkedin.com/in/anna-martine-%C3%B8stmoen-82a67235a/",
-    valgemner: ["IS-115 - Webprogrammering i PHP", "IS-309 - Videregående databasesystemer", "IS-214 - Information System Security", "IS-211 - Algorithms and Data Structures", "ME-100 - Sammfunnsvitenskapelig metode", "Ekstraemne: IKT115 - Introduksjon til kunstlig intelligens-teknologi"],
+    valgemner: ["IS-115 - Webprogrammering i PHP", "IS-309 - Videregående databasesystemer", "IS-214 - Information Systems Security", "IS-211 - Algorithms and Data Structures", "ME-100 - Sammfunnsvitenskapelig metode", "Ekstraemne: IKT115 - Introduksjon til kunstlig intelligens-teknologi"],
   },
 ];
