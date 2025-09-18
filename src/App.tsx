@@ -120,6 +120,8 @@ export default function App() {
             padding: '2rem',
             borderRadius: '12px',
             color: '#2f2f2f',
+            fontSize: '1.05rem',
+            lineHeight: '1.7',
           }}
         >
           <h2 style={{ color: '#3d5229' }}>OM OSS</h2>
