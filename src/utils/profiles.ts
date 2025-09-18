@@ -12,7 +12,7 @@ export const profiles = [
     description: "Jeg er 22 år gammel og kommer fra Oslo. Med bakgrunn fra servicebransjen og med at jeg tar en utdanning i IT & Informasjonssystemer får jeg en unik kombinasjon av teknisk kompetanse og menneskelig forståelse. Som fullstack utvikler trives jeg med å bygge løsninger som både fungerer teknisk og gir en god brukeropplevelse, samtidig som jeg har en sterk interesse for cybersikkerhet. \nGjennom studier og prosjekter, hvor jeg også har hatt rollen som prosjektleder, har jeg lært hvor viktig det er å kombinere struktur, samarbeid og kommunikasjon for å levere gode resultater. Jeg motiveres av å forstå brukerbehov og omsette dem til digitale tjenester som gjør en forskjell for både bruker og virksomhet.",
     github: "https://github.com/SveleThea",
     linkedin: "https://www.linkedin.com/in/thea-svele-corneliussen-046a36354/",
-    valgemner: ["Webutvikling", "Datasikkerhet", "Maskinlæring"]
+    valgemner: ["IS-217 - Universell Utforming av Informasjonssystemer", "TFL-119 - IT og Samfunnsendringer", "IS-214 - Information Systems Security", "ORG313 - Gründer Lab and Entrepreneurship", "ME-100 - Sammfunnsvitenskapelig metode"]
   },
   {
     name: "Olivia Fledsberg Petterøe",
@@ -30,7 +30,7 @@ export const profiles = [
     description: "Jeg heter Vilde Christensen og er en 22 år gammel student fra Lyngdal. For tiden studerer jeg IT og informasjonssystemer ved Universitetet i Agder, med særlig interesse for programmering, cybersikkerhet og design. Programmering er det som virkelig fenger meg, og jeg ser frontend-utvikling som en spennende måte å kombinere koding med kreative digitale løsninger på. Jeg trives godt i sosiale settinger og finner motivasjon i å arbeide sammen med andre for å skape gode resultater.\n\nGjennom flere år i servicebransjen har jeg opparbeidet meg verdifull erfaring innen ledelse, kundebehandling og samarbeid. Det er ferdigheter jeg opplever som svært nyttige også innen teknologi og utvikling. Nettopp derfor motiverer det meg å kunne utvikle brukervennlige og engasjerende grensesnitt som gjør en forskjell for folk.",
     github: "https://github.com/Vildech",
     linkedin: "https://www.linkedin.com/in/vilde-christensen/",
-    valgemner: ["Webutvikling", "Datasikkerhet", "Maskinlæring"]
+    valgemner: ["IS-217 - Universell Utforming av Informasjonssystemer", "TFL-119 - IT og Samfunnsendringer", "IS-214 - Information Systems Security", "ORG313 - Gründer Lab and Entrepreneurship", "ME-100 - Sammfunnsvitenskapelig metode"]
   },
   {
     name: "Andrea Vågen",
@@ -39,7 +39,7 @@ export const profiles = [
     description: "Jeg heter Andrea Vågen, er 24 år og kommer fra Kristiansand. Jeg går siste året på bachelor i IT og informasjonssystemer ved UiA, med et bredt interessefelt innen IT, men noe av det jeg synes er mest spennende er programmering og kunstig intelligens. Jeg har også tatt flere tilleggs-emner innen KI, og er interessert i å lære nye ting. \nVed siden av studiet jobber jeg for tiden med utvikling av applikasjon for en oppstartsbedrift; Daltex Resindekke. Gjennom dette arbeidsoppdraget får jeg muligheten til å delta i prosjektarbeid, problemløsning og tett samarbeid med en reell bedrift - erfaringer jeg opplever som utrolig spennende, lærerike og motiverende å ta med meg videre.",
     github: "https://github.com/andreavaagen",
     linkedin: "https://www.linkedin.com/in/andrea-v%C3%A5gen-670b18380/",
-    valgemner: ["Webutvikling", "Datasikkerhet", "Maskinlæring"]
+    valgemner: ["IS-115 - Webprogrammering i PHP", "IS-309 - Videregående databasesystemer", "IS-214 - Information Systems Security", "IS-211 - Algorithms and Data Structures", "ME-100 - Sammfunnsvitenskapelig metode", "Ekstraemne: IKT115 - Introduksjon til kunstlig intelligens-teknologi", "IS-117 Introduction to Human-Centered Artificial Intelligence"]
   },
   {
     name: "Anna Martine Østmoen",
