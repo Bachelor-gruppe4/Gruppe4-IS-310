@@ -1,6 +1,6 @@
 // src/Projects.tsx
 import MomentAnalyseLogo from './assets/images/MomentAnalyse.webp';
-import DaltexLogo from './assets/images/DaltexResindekke.jpg';
+import ResindekkeLogo from './assets/images/ResindekkeNorge.png';
 import DiginLogo from './assets/images/Digin.png';
 import KartverketLogo from './assets/images/Kartverket.png';
 import DisasterLogo from './assets/images/DisasterAlert.png';
@@ -21,9 +21,11 @@ export default function Projects() {
       status: "Pågående",
     },
     {
-      title: "Daltex Resindekke",
-      logo: DaltexLogo,
-      description: `Beskrivelse av oppgave: Arbeidsoppdrag for Daltex Resindekke.`,
+      title: "Resindekke Norge",
+      logo: ResindekkeLogo,
+      description: `Arbeidsoppdraget innebærer å utvikle en nettside for oppstartsbedriften Resindekke Norge, 
+      med fokus på markedsføring og synlighet på nett. Prosjektet gir erfaring med møter med bedrift, 
+      behovskartlegging, UX-design, utvikling i WordPress og programmering.`,
       status: "Pågående",
     },
     {
