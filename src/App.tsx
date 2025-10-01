@@ -120,6 +120,8 @@ export default function App() {
             padding: '2rem',
             borderRadius: '12px',
             color: '#2f2f2f',
+            fontSize: '1.05rem',
+            lineHeight: '1.7',
           }}
         >
           <h2 style={{ color: '#3d5229' }}>OM OSS</h2>
@@ -135,7 +137,7 @@ export default function App() {
             samarbeid med blant annet Kartverket og Digin, praksis hos Moment Analyse og arbeidsoppdrag
             fra Daltex Resindekke.
           </p>
-          <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
           <Link
             to="/projects"
             style={{
@@ -151,8 +153,25 @@ export default function App() {
           >
             Se våre prosjekter her!
           </Link>
+          <a
+            href="https://youtu.be/JQs3_z8rsVQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '6px',
+              backgroundColor: '#719867',
+              color: '#ffffffff',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '0.9rem',
+            }}
+          >
+            Se vår promovideo her!
+          </a>
         </div>
-        </div>
+      </div>
 
         {/* Divider */}
         <div
