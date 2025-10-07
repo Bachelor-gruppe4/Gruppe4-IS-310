@@ -28,6 +28,26 @@ export default function App() {
         }}
       >
         GRUPPE 4
+        {/* Link til YouTube-video */}
+        <a
+          href="https://youtu.be/JQs3_z8rsVQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '30rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            paddingRight: '3rem',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Promovideo
+        </a>
 
         {/* Link til Medlemmer */}
         <a
