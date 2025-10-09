@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem; /* ❗ fjernet topp-padding */
   text-align: center;
 }
 
@@ -51,3 +51,109 @@ h1, h2, h3, h4, h5, h6 {
 .read-the-docs {
   color: #888;
 }
+
+/* Grunnstil (gjelder alle skjermer) */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  color: #3d5229;
+  padding: 3rem 6vw; /* var 2rem 5vw – gir mer luft over/under */
+  font-size: clamp(1.4rem, 4.5vw, 2.4rem); /* øker tekststørrelsen */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+
+  /* 👇 gjør den full bredde uavhengig av #root */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 0;
+}
+
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.banner-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.banner-links a {
+  text-decoration: none;
+  color: #3d5229;
+}
+
+/* --- Mobilfix: lenker ved siden av hverandre --- */
+@media (max-width: 700px) {
+  .banner {
+    /* Tittel på egen linje, lenker under */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    padding: 1rem 5vw;
+  }
+
+  .banner-links {
+    display: flex !important;        /* sørg for at det faktisk er flex */
+    flex-direction: row !important;  /* horisontalt */
+    flex-wrap: wrap;                  /* bryt pent hvis ikke plass */
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    width: auto;                      /* ikke tving 100% bredde */
+  }
+
+  .banner-links a {
+    display: inline-flex;             /* ikke full bredde per lenke */
+    white-space: nowrap;              /* ikke del opp teksten i to linjer */
+    text-decoration: none;
+    color: #3d5229;
+    font-weight: bold;
+  }
+}
+/* Smale mobiler: strammere banner */
+@media (max-width: 480px) {
+  .banner {
+    padding: 0.8rem 4vw;          /* mindre luft */
+    font-size: clamp(1rem, 4vw, 1.4rem); /* mindre tittelstørrelse */
+    gap: 0.4rem;
+  }
+
+  .brand {
+    font-size: 1.4rem;            /* egen kontroll på tittelen */
+    line-height: 1.2;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-links {
+    display: flex !important;
+    flex-direction: row !important; /* horisontalt */
+    flex-wrap: wrap;       .         /* bryt pent */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;                    /* tettere mellom lenkene */
+    margin-top: 0.2rem;
+  }
+
+  .banner-links a {
+    display: inline-flex;
+    white-space: nowrap;            /* unngå to-linjers lenketekst */
+    font-size: 0.95rem;             /* litt mindre på veldig smalt */
+    line-height: 1.2;
+  }
+}
+
