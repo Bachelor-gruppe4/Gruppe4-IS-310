@@ -139,15 +139,16 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 
-  .banner-links {
-    display: flex !important;
-    flex-direction: row !important; /* horisontalt */
-    flex-wrap: wrap;       .         /* bryt pent */
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;                    /* tettere mellom lenkene */
-    margin-top: 0.2rem;
-  }
+.banner-links {
+  display: flex !important;
+  flex-direction: row !important; /* horisontalt */
+  flex-wrap: wrap;                /* bryt pent */
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;                    /* tettere mellom lenkene */
+  margin-top: 0.2rem;
+}
+
 
   .banner-links a {
     display: inline-flex;
