@@ -5,35 +5,110 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import gruppebilde from './assets/images/Gruppebilde.jpeg';
 
-const linkStyle = {
-  fontSize: '1rem',
-  fontWeight: 'bold',
-  color: '#3d5229',
-  textDecoration: 'none',
-};
-
 export default function App() {
   return (
     <div>
-   {/* Banner */}
-<div className="banner" style={{ position: 'relative', zIndex: 1000 }}>
-  <div className="brand">GRUPPE 4</div>
+      {/* Banner */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          background: '#ffffff',
+          color: '#3d5229',
+          padding: '3rem 0',
+          textAlign: 'left',
+          paddingLeft: '3rem',
+          fontSize: '2rem',
+          fontWeight: '700',
+          letterSpacing: '0.05em',
+          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
+          zIndex: 1000,
+        }}
+      >
+        GRUPPE 4
+        {/* Link til YouTube-video */}
+        <a
+          href="https://youtu.be/JQs3_z8rsVQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '30rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            paddingRight: '3rem',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Promovideo
+        </a>
 
-  <div className="banner-links">
-    <a href="https://youtu.be/JQs3_z8rsVQ" target="_blank" rel="noopener noreferrer">Promovideo</a>
-    <a href="#members">Medlemmer</a>
-    <Link to="/projects">Prosjekter</Link>
-    <a href="#contact">Kontakt oss</a>
-  </div>
-</div>
+        {/* Link til Medlemmer */}
+        <a
+          href="#members"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '18rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            paddingRight: '6rem',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Medlemmer
+        </a>
 
-      {/* End Banner */}
+        {/* Link til Prosjekter */}
+        <Link
+          to="/projects"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '10rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            paddingRight: '6rem',
+            fontWeight: 'bold',
+            color: '#3d5229',
+            textDecoration: 'none',
+          }}
+        >
+          Prosjekter
+        </Link>
 
-
+        {/* Link til Kontakt */}
+        <a
+          href="#contact"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '4rem',
+            transform: 'translateY(-50%)',
+            fontSize: '1rem',
+            paddingRight: '3rem',
+            fontWeight: 'bold',
+            color: '#3d5229',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Kontakt oss
+        </a>
+      </div>
 {/* Gruppebilde */}
 <div
   style={{
-    marginTop: '0', // plass til banneret
+    marginTop: '6.5rem', // plass til banneret
     width: '100vw',      // hele skjermbredden
     position: 'relative',
     left: '50%',         // skyver til midten
