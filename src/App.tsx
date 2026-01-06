@@ -36,7 +36,7 @@ export default function App() {
           style={{
             position: 'absolute',
             top: '50%',
-            right: '30rem',
+            right: '38rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
             fontWeight: 'bold',
@@ -55,7 +55,7 @@ export default function App() {
           style={{
             position: 'absolute',
             top: '50%',
-            right: '18rem',
+            right: '27rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
             fontWeight: 'bold',
@@ -74,7 +74,7 @@ export default function App() {
           style={{
             position: 'absolute',
             top: '50%',
-            right: '10rem',
+            right: '20rem',
             transform: 'translateY(-50%)',
             fontSize: '1rem',
             paddingRight: '6rem',
@@ -85,6 +85,24 @@ export default function App() {
         >
           Prosjekter
         </Link>
+
+          {/* Link til Bacheloroppgave */}
+          <Link
+              to="/bacheloroppgave"
+              style={{
+                  position: 'absolute',
+                  top: '50%',
+                  right: '9rem',
+                  transform: 'translateY(-50%)',
+                  fontSize: '1rem',
+                  paddingRight: '6rem',
+                  fontWeight: 'bold',
+                  color: '#3d5229',
+                  textDecoration: 'none',
+              }}
+          >
+              Bacheloroppgave
+          </Link>
 
         {/* Link til Kontakt */}
         <a
