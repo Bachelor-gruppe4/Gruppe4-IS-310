@@ -139,7 +139,23 @@ export default function Bacheloroppgave() {
                 <section style={{marginTop: '2rem'}}>
                     <h2 style={{color: '#719867'}}>Status 1</h2>
                     <p>
-                        ...
+                        <a
+                            href="https://www.youtube.com/watch?v=pKYi3uo1q8I"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                display: 'inline-block',
+                                padding: '0.8rem 1.5rem',
+                                borderRadius: '6px',
+                                backgroundColor: '#719867',
+                                color: '#ffffffff',
+                                textDecoration: 'none',
+                                fontWeight: 'bold',
+                                fontSize: '0.9rem',
+                            }}
+                        >
+                            Se videoen her!
+                        </a>
                     </p>
                 </section>
 
